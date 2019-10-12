@@ -1,7 +1,7 @@
 GIT
   remote: git@github.com:yukihirop/routes_to_swagger_docs.git
-  revision: bea03135e22df7ef10d324b6e0709c44413b8af5
-  tag: v0.1.0.pre
+  revision: df02a40d0f2c02a574d9b2de50ab9db8dd5bb2d3
+  tag: v0.1.0.pre2
   specs:
     routes_to_swagger_docs (0.1.0)
       docker-api (~> 1.34.2)
