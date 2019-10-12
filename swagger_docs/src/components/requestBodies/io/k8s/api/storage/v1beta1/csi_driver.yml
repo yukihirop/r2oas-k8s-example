@@ -1,0 +1,9 @@
+---
+components:
+  requestBodies:
+    io.k8s.api.storage.v1beta1.CSIDriver:
+      content:
+        "*/*":
+          schema:
+            "$ref": "#/components/schemas/io.k8s.api.storage.v1beta1.CSIDriver"
+      required: true

@@ -1,0 +1,16 @@
+---
+components:
+  schemas:
+    io.k8s.api.extensions.v1beta1.IngressBackend:
+      description: IngressBackend describes all endpoints for a given service and
+        port.
+      properties:
+        serviceName:
+          description: Specifies the name of the referenced service.
+          type: string
+        servicePort:
+          "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.util.intstr.IntOrString"
+      required:
+      - serviceName
+      - servicePort
+      type: object

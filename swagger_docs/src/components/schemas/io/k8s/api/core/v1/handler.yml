@@ -1,0 +1,13 @@
+---
+components:
+  schemas:
+    io.k8s.api.core.v1.Handler:
+      description: Handler defines a specific action that should be taken
+      properties:
+        exec:
+          "$ref": "#/components/schemas/io.k8s.api.core.v1.ExecAction"
+        httpGet:
+          "$ref": "#/components/schemas/io.k8s.api.core.v1.HTTPGetAction"
+        tcpSocket:
+          "$ref": "#/components/schemas/io.k8s.api.core.v1.TCPSocketAction"
+      type: object

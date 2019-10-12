@@ -1,0 +1,9 @@
+---
+components:
+  requestBodies:
+    io.k8s.api.apps.v1.DaemonSet:
+      content:
+        "*/*":
+          schema:
+            "$ref": "#/components/schemas/io.k8s.api.apps.v1.DaemonSet"
+      required: true

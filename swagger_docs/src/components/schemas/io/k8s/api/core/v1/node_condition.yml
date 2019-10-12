@@ -1,0 +1,26 @@
+---
+components:
+  schemas:
+    io.k8s.api.core.v1.NodeCondition:
+      description: NodeCondition contains condition information for a node.
+      properties:
+        lastHeartbeatTime:
+          "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.apis.meta.v1.Time"
+        lastTransitionTime:
+          "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.apis.meta.v1.Time"
+        message:
+          description: Human readable message indicating details about last transition.
+          type: string
+        reason:
+          description: "(brief) reason for the condition's last transition."
+          type: string
+        status:
+          description: Status of the condition, one of True, False, Unknown.
+          type: string
+        type:
+          description: Type of node condition.
+          type: string
+      required:
+      - type
+      - status
+      type: object

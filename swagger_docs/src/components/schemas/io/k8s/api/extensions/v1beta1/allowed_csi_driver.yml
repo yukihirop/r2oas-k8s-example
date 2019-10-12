@@ -1,0 +1,13 @@
+---
+components:
+  schemas:
+    io.k8s.api.extensions.v1beta1.AllowedCSIDriver:
+      description: AllowedCSIDriver represents a single inline CSI Driver that is
+        allowed to be used.
+      properties:
+        name:
+          description: Name is the registered name of the CSI driver
+          type: string
+      required:
+      - name
+      type: object

@@ -1,0 +1,15 @@
+---
+components:
+  schemas:
+    io.k8s.api.authentication.v1.TokenRequestStatus:
+      description: TokenRequestStatus is the result of a token request.
+      properties:
+        expirationTimestamp:
+          "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.apis.meta.v1.Time"
+        token:
+          description: Token is the opaque bearer token.
+          type: string
+      required:
+      - token
+      - expirationTimestamp
+      type: object

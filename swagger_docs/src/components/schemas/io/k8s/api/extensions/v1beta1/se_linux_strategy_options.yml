@@ -1,0 +1,17 @@
+---
+components:
+  schemas:
+    io.k8s.api.extensions.v1beta1.SELinuxStrategyOptions:
+      description: 'SELinuxStrategyOptions defines the strategy type and any options
+        used to create the strategy. Deprecated: use SELinuxStrategyOptions from policy
+        API Group instead.'
+      properties:
+        rule:
+          description: rule is the strategy that will dictate the allowable labels
+            that may be set.
+          type: string
+        seLinuxOptions:
+          "$ref": "#/components/schemas/io.k8s.api.core.v1.SELinuxOptions"
+      required:
+      - rule
+      type: object

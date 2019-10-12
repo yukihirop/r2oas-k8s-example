@@ -1,0 +1,15 @@
+---
+components:
+  schemas:
+    io.k8s.api.autoscaling.v2beta2.MetricIdentifier:
+      description: MetricIdentifier defines the name and optionally selector for a
+        metric
+      properties:
+        name:
+          description: name is the name of the given metric
+          type: string
+        selector:
+          "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.apis.meta.v1.LabelSelector"
+      required:
+      - name
+      type: object

@@ -1,0 +1,14 @@
+---
+components:
+  schemas:
+    io.k8s.api.auditregistration.v1alpha1.AuditSinkSpec:
+      description: AuditSinkSpec holds the spec for the audit sink
+      properties:
+        policy:
+          "$ref": "#/components/schemas/io.k8s.api.auditregistration.v1alpha1.Policy"
+        webhook:
+          "$ref": "#/components/schemas/io.k8s.api.auditregistration.v1alpha1.Webhook"
+      required:
+      - policy
+      - webhook
+      type: object

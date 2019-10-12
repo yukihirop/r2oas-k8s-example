@@ -1,0 +1,14 @@
+---
+components:
+  schemas:
+    io.k8s.api.batch.v2alpha1.CronJobStatus:
+      description: CronJobStatus represents the current state of a cron job.
+      properties:
+        active:
+          description: A list of pointers to currently running jobs.
+          items:
+            "$ref": "#/components/schemas/io.k8s.api.core.v1.ObjectReference"
+          type: array
+        lastScheduleTime:
+          "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.apis.meta.v1.Time"
+      type: object

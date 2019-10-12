@@ -1,0 +1,13 @@
+---
+components:
+  schemas:
+    io.k8s.api.networking.v1.NetworkPolicyPort:
+      description: NetworkPolicyPort describes a port to allow traffic on
+      properties:
+        port:
+          "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.util.intstr.IntOrString"
+        protocol:
+          description: The protocol (TCP, UDP, or SCTP) which traffic must match.
+            If not specified, this field defaults to TCP.
+          type: string
+      type: object

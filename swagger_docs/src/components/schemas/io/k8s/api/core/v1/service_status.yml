@@ -1,0 +1,9 @@
+---
+components:
+  schemas:
+    io.k8s.api.core.v1.ServiceStatus:
+      description: ServiceStatus represents the current status of a service.
+      properties:
+        loadBalancer:
+          "$ref": "#/components/schemas/io.k8s.api.core.v1.LoadBalancerStatus"
+      type: object

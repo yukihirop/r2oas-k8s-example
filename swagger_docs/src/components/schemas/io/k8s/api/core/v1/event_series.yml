@@ -1,0 +1,19 @@
+---
+components:
+  schemas:
+    io.k8s.api.core.v1.EventSeries:
+      description: EventSeries contain information on series of events, i.e. thing
+        that was/is happening continuously for some time.
+      properties:
+        count:
+          description: Number of occurrences in this series up to the last heartbeat
+            time
+          format: int32
+          type: integer
+        lastObservedTime:
+          "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.apis.meta.v1.MicroTime"
+        state:
+          description: 'State of this Series: Ongoing or Finished Deprecated. Planned
+            removal for 1.18'
+          type: string
+      type: object

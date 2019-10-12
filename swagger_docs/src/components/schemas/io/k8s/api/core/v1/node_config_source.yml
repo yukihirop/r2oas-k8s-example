@@ -1,0 +1,10 @@
+---
+components:
+  schemas:
+    io.k8s.api.core.v1.NodeConfigSource:
+      description: NodeConfigSource specifies a source of node configuration. Exactly
+        one subfield (excluding metadata) must be non-nil.
+      properties:
+        configMap:
+          "$ref": "#/components/schemas/io.k8s.api.core.v1.ConfigMapNodeConfigSource"
+      type: object

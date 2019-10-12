@@ -1,0 +1,12 @@
+---
+components:
+  schemas:
+    io.k8s.api.batch.v2alpha1.JobTemplateSpec:
+      description: JobTemplateSpec describes the data a Job should have when created
+        from a template
+      properties:
+        metadata:
+          "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta"
+        spec:
+          "$ref": "#/components/schemas/io.k8s.api.batch.v1.JobSpec"
+      type: object

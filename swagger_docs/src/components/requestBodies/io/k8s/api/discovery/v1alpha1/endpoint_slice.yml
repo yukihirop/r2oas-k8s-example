@@ -1,0 +1,9 @@
+---
+components:
+  requestBodies:
+    io.k8s.api.discovery.v1alpha1.EndpointSlice:
+      content:
+        "*/*":
+          schema:
+            "$ref": "#/components/schemas/io.k8s.api.discovery.v1alpha1.EndpointSlice"
+      required: true

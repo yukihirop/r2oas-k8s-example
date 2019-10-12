@@ -1,0 +1,89 @@
+---
+components:
+  schemas:
+    io.k8s.api.core.v1.PersistentVolumeSpec:
+      description: PersistentVolumeSpec is the specification of a persistent volume.
+      properties:
+        accessModes:
+          description: 'AccessModes contains all ways the volume can be mounted. More
+            info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes'
+          items:
+            type: string
+          type: array
+        awsElasticBlockStore:
+          "$ref": "#/components/schemas/io.k8s.api.core.v1.AWSElasticBlockStoreVolumeSource"
+        azureDisk:
+          "$ref": "#/components/schemas/io.k8s.api.core.v1.AzureDiskVolumeSource"
+        azureFile:
+          "$ref": "#/components/schemas/io.k8s.api.core.v1.AzureFilePersistentVolumeSource"
+        capacity:
+          additionalProperties:
+            "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.api.resource.Quantity"
+          description: 'A description of the persistent volume''s resources and capacity.
+            More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#capacity'
+          type: object
+        cephfs:
+          "$ref": "#/components/schemas/io.k8s.api.core.v1.CephFSPersistentVolumeSource"
+        cinder:
+          "$ref": "#/components/schemas/io.k8s.api.core.v1.CinderPersistentVolumeSource"
+        claimRef:
+          "$ref": "#/components/schemas/io.k8s.api.core.v1.ObjectReference"
+        csi:
+          "$ref": "#/components/schemas/io.k8s.api.core.v1.CSIPersistentVolumeSource"
+        fc:
+          "$ref": "#/components/schemas/io.k8s.api.core.v1.FCVolumeSource"
+        flexVolume:
+          "$ref": "#/components/schemas/io.k8s.api.core.v1.FlexPersistentVolumeSource"
+        flocker:
+          "$ref": "#/components/schemas/io.k8s.api.core.v1.FlockerVolumeSource"
+        gcePersistentDisk:
+          "$ref": "#/components/schemas/io.k8s.api.core.v1.GCEPersistentDiskVolumeSource"
+        glusterfs:
+          "$ref": "#/components/schemas/io.k8s.api.core.v1.GlusterfsPersistentVolumeSource"
+        hostPath:
+          "$ref": "#/components/schemas/io.k8s.api.core.v1.HostPathVolumeSource"
+        iscsi:
+          "$ref": "#/components/schemas/io.k8s.api.core.v1.ISCSIPersistentVolumeSource"
+        local:
+          "$ref": "#/components/schemas/io.k8s.api.core.v1.LocalVolumeSource"
+        mountOptions:
+          description: 'A list of mount options, e.g. ["ro", "soft"]. Not validated
+            - mount will simply fail if one is invalid. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes/#mount-options'
+          items:
+            type: string
+          type: array
+        nfs:
+          "$ref": "#/components/schemas/io.k8s.api.core.v1.NFSVolumeSource"
+        nodeAffinity:
+          "$ref": "#/components/schemas/io.k8s.api.core.v1.VolumeNodeAffinity"
+        persistentVolumeReclaimPolicy:
+          description: 'What happens to a persistent volume when released from its
+            claim. Valid options are Retain (default for manually created PersistentVolumes),
+            Delete (default for dynamically provisioned PersistentVolumes), and Recycle
+            (deprecated). Recycle must be supported by the volume plugin underlying
+            this PersistentVolume. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#reclaiming'
+          type: string
+        photonPersistentDisk:
+          "$ref": "#/components/schemas/io.k8s.api.core.v1.PhotonPersistentDiskVolumeSource"
+        portworxVolume:
+          "$ref": "#/components/schemas/io.k8s.api.core.v1.PortworxVolumeSource"
+        quobyte:
+          "$ref": "#/components/schemas/io.k8s.api.core.v1.QuobyteVolumeSource"
+        rbd:
+          "$ref": "#/components/schemas/io.k8s.api.core.v1.RBDPersistentVolumeSource"
+        scaleIO:
+          "$ref": "#/components/schemas/io.k8s.api.core.v1.ScaleIOPersistentVolumeSource"
+        storageClassName:
+          description: Name of StorageClass to which this persistent volume belongs.
+            Empty value means that this volume does not belong to any StorageClass.
+          type: string
+        storageos:
+          "$ref": "#/components/schemas/io.k8s.api.core.v1.StorageOSPersistentVolumeSource"
+        volumeMode:
+          description: volumeMode defines if a volume is intended to be used with
+            a formatted filesystem or to remain in raw block state. Value of Filesystem
+            is implied when not included in spec. This is a beta feature.
+          type: string
+        vsphereVolume:
+          "$ref": "#/components/schemas/io.k8s.api.core.v1.VsphereVirtualDiskVolumeSource"
+      type: object

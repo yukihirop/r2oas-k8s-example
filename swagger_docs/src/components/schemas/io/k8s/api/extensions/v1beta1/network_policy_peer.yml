@@ -1,0 +1,14 @@
+---
+components:
+  schemas:
+    io.k8s.api.extensions.v1beta1.NetworkPolicyPeer:
+      description: DEPRECATED 1.9 - This group version of NetworkPolicyPeer is deprecated
+        by networking/v1/NetworkPolicyPeer.
+      properties:
+        ipBlock:
+          "$ref": "#/components/schemas/io.k8s.api.extensions.v1beta1.IPBlock"
+        namespaceSelector:
+          "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.apis.meta.v1.LabelSelector"
+        podSelector:
+          "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.apis.meta.v1.LabelSelector"
+      type: object

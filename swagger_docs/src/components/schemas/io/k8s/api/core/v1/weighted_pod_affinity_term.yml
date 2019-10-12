@@ -1,0 +1,18 @@
+---
+components:
+  schemas:
+    io.k8s.api.core.v1.WeightedPodAffinityTerm:
+      description: The weights of all of the matched WeightedPodAffinityTerm fields
+        are added per-node to find the most preferred node(s)
+      properties:
+        podAffinityTerm:
+          "$ref": "#/components/schemas/io.k8s.api.core.v1.PodAffinityTerm"
+        weight:
+          description: weight associated with matching the corresponding podAffinityTerm,
+            in the range 1-100.
+          format: int32
+          type: integer
+      required:
+      - weight
+      - podAffinityTerm
+      type: object

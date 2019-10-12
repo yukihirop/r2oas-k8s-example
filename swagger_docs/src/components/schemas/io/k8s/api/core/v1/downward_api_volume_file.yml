@@ -1,0 +1,26 @@
+---
+components:
+  schemas:
+    io.k8s.api.core.v1.DownwardAPIVolumeFile:
+      description: DownwardAPIVolumeFile represents information to create the file
+        containing the pod field
+      properties:
+        fieldRef:
+          "$ref": "#/components/schemas/io.k8s.api.core.v1.ObjectFieldSelector"
+        mode:
+          description: 'Optional: mode bits to use on this file, must be a value between
+            0 and 0777. If not specified, the volume defaultMode will be used. This
+            might be in conflict with other options that affect the file mode, like
+            fsGroup, and the result can be other mode bits set.'
+          format: int32
+          type: integer
+        path:
+          description: 'Required: Path is  the relative path name of the file to be
+            created. Must not be absolute or contain the ''..'' path. Must be utf-8
+            encoded. The first item of the relative path must not start with ''..'''
+          type: string
+        resourceFieldRef:
+          "$ref": "#/components/schemas/io.k8s.api.core.v1.ResourceFieldSelector"
+      required:
+      - path
+      type: object

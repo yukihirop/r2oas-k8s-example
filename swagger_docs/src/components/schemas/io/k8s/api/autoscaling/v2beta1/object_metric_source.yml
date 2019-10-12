@@ -1,0 +1,23 @@
+---
+components:
+  schemas:
+    io.k8s.api.autoscaling.v2beta1.ObjectMetricSource:
+      description: ObjectMetricSource indicates how to scale on a metric describing
+        a kubernetes object (for example, hits-per-second on an Ingress object).
+      properties:
+        averageValue:
+          "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.api.resource.Quantity"
+        metricName:
+          description: metricName is the name of the metric in question.
+          type: string
+        selector:
+          "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.apis.meta.v1.LabelSelector"
+        target:
+          "$ref": "#/components/schemas/io.k8s.api.autoscaling.v2beta1.CrossVersionObjectReference"
+        targetValue:
+          "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.api.resource.Quantity"
+      required:
+      - target
+      - metricName
+      - targetValue
+      type: object

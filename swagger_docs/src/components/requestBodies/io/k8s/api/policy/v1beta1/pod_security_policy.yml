@@ -1,0 +1,9 @@
+---
+components:
+  requestBodies:
+    io.k8s.api.policy.v1beta1.PodSecurityPolicy:
+      content:
+        "*/*":
+          schema:
+            "$ref": "#/components/schemas/io.k8s.api.policy.v1beta1.PodSecurityPolicy"
+      required: true

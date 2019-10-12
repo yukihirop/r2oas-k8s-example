@@ -1,0 +1,21 @@
+---
+components:
+  schemas:
+    io.k8s.api.autoscaling.v2beta1.ExternalMetricStatus:
+      description: ExternalMetricStatus indicates the current value of a global metric
+        not associated with any Kubernetes object.
+      properties:
+        currentAverageValue:
+          "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.api.resource.Quantity"
+        currentValue:
+          "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.api.resource.Quantity"
+        metricName:
+          description: metricName is the name of a metric used for autoscaling in
+            metric system.
+          type: string
+        metricSelector:
+          "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.apis.meta.v1.LabelSelector"
+      required:
+      - metricName
+      - currentValue
+      type: object

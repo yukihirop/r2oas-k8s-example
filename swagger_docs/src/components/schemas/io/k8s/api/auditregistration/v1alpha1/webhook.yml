@@ -1,0 +1,13 @@
+---
+components:
+  schemas:
+    io.k8s.api.auditregistration.v1alpha1.Webhook:
+      description: Webhook holds the configuration of the webhook
+      properties:
+        clientConfig:
+          "$ref": "#/components/schemas/io.k8s.api.auditregistration.v1alpha1.WebhookClientConfig"
+        throttle:
+          "$ref": "#/components/schemas/io.k8s.api.auditregistration.v1alpha1.WebhookThrottleConfig"
+      required:
+      - clientConfig
+      type: object

@@ -1,0 +1,18 @@
+---
+paths:
+  "/version/":
+    get:
+      description: get the code version
+      operationId: getCodeVersion
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.version.Info"
+        '401':
+          description: Unauthorized
+      tags:
+      - version
+      servers: []

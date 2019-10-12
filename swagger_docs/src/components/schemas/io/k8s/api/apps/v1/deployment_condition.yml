@@ -1,0 +1,27 @@
+---
+components:
+  schemas:
+    io.k8s.api.apps.v1.DeploymentCondition:
+      description: DeploymentCondition describes the state of a deployment at a certain
+        point.
+      properties:
+        lastTransitionTime:
+          "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.apis.meta.v1.Time"
+        lastUpdateTime:
+          "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.apis.meta.v1.Time"
+        message:
+          description: A human readable message indicating details about the transition.
+          type: string
+        reason:
+          description: The reason for the condition's last transition.
+          type: string
+        status:
+          description: Status of the condition, one of True, False, Unknown.
+          type: string
+        type:
+          description: Type of deployment condition.
+          type: string
+      required:
+      - type
+      - status
+      type: object

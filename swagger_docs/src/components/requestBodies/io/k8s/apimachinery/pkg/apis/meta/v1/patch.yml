@@ -1,0 +1,18 @@
+---
+components:
+  requestBodies:
+    io.k8s.apimachinery.pkg.apis.meta.v1.Patch:
+      content:
+        application/json-patch+json:
+          schema:
+            "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.apis.meta.v1.Patch"
+        application/merge-patch+json:
+          schema:
+            "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.apis.meta.v1.Patch"
+        application/strategic-merge-patch+json:
+          schema:
+            "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.apis.meta.v1.Patch"
+        application/apply-patch+yaml:
+          schema:
+            "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.apis.meta.v1.Patch"
+      required: true

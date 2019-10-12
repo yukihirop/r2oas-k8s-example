@@ -1,0 +1,31 @@
+---
+components:
+  schemas:
+    io.k8s.api.batch.v1.JobStatus:
+      description: JobStatus represents the current state of a Job.
+      properties:
+        active:
+          description: The number of actively running pods.
+          format: int32
+          type: integer
+        completionTime:
+          "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.apis.meta.v1.Time"
+        conditions:
+          description: 'The latest available observations of an object''s current
+            state. More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/'
+          items:
+            "$ref": "#/components/schemas/io.k8s.api.batch.v1.JobCondition"
+          type: array
+          x-kubernetes-patch-merge-key: type
+          x-kubernetes-patch-strategy: merge
+        failed:
+          description: The number of pods which reached phase Failed.
+          format: int32
+          type: integer
+        startTime:
+          "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.apis.meta.v1.Time"
+        succeeded:
+          description: The number of pods which reached phase Succeeded.
+          format: int32
+          type: integer
+      type: object

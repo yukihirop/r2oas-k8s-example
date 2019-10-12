@@ -1,0 +1,9 @@
+---
+components:
+  requestBodies:
+    io.k8s.api.extensions.v1beta1.Deployment:
+      content:
+        "*/*":
+          schema:
+            "$ref": "#/components/schemas/io.k8s.api.extensions.v1beta1.Deployment"
+      required: true

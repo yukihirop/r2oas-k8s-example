@@ -1,0 +1,342 @@
+---
+tags:
+- name: core
+  description: core description
+  externalDocs:
+    description: description
+    url: url
+- name: core_v1
+  description: core_v1 description
+  externalDocs:
+    description: description
+    url: url
+- name: parameters
+  description: parameters description
+  externalDocs:
+    description: description
+    url: url
+- name: apis
+  description: apis description
+  externalDocs:
+    description: description
+    url: url
+- name: admissionregistration
+  description: admissionregistration description
+  externalDocs:
+    description: description
+    url: url
+- name: admissionregistration_v1
+  description: admissionregistration_v1 description
+  externalDocs:
+    description: description
+    url: url
+- name: admissionregistration_v1beta1
+  description: admissionregistration_v1beta1 description
+  externalDocs:
+    description: description
+    url: url
+- name: apiextensions
+  description: apiextensions description
+  externalDocs:
+    description: description
+    url: url
+- name: apiextensions_v1
+  description: apiextensions_v1 description
+  externalDocs:
+    description: description
+    url: url
+- name: apiextensions_v1beta1
+  description: apiextensions_v1beta1 description
+  externalDocs:
+    description: description
+    url: url
+- name: apiregistration
+  description: apiregistration description
+  externalDocs:
+    description: description
+    url: url
+- name: apiregistration_v1
+  description: apiregistration_v1 description
+  externalDocs:
+    description: description
+    url: url
+- name: apiregistration_v1beta1
+  description: apiregistration_v1beta1 description
+  externalDocs:
+    description: description
+    url: url
+- name: apps
+  description: apps description
+  externalDocs:
+    description: description
+    url: url
+- name: apps_v1
+  description: apps_v1 description
+  externalDocs:
+    description: description
+    url: url
+- name: apps_v1beta1
+  description: apps_v1beta1 description
+  externalDocs:
+    description: description
+    url: url
+- name: apps_v1beta2
+  description: apps_v1beta2 description
+  externalDocs:
+    description: description
+    url: url
+- name: auditregistration
+  description: auditregistration description
+  externalDocs:
+    description: description
+    url: url
+- name: auditregistration_v1alpha1
+  description: auditregistration_v1alpha1 description
+  externalDocs:
+    description: description
+    url: url
+- name: authentication
+  description: authentication description
+  externalDocs:
+    description: description
+    url: url
+- name: authentication_v1
+  description: authentication_v1 description
+  externalDocs:
+    description: description
+    url: url
+- name: authentication_v1beta1
+  description: authentication_v1beta1 description
+  externalDocs:
+    description: description
+    url: url
+- name: authorization
+  description: authorization description
+  externalDocs:
+    description: description
+    url: url
+- name: authorization_v1
+  description: authorization_v1 description
+  externalDocs:
+    description: description
+    url: url
+- name: authorization_v1beta1
+  description: authorization_v1beta1 description
+  externalDocs:
+    description: description
+    url: url
+- name: autoscaling
+  description: autoscaling description
+  externalDocs:
+    description: description
+    url: url
+- name: autoscaling_v1
+  description: autoscaling_v1 description
+  externalDocs:
+    description: description
+    url: url
+- name: autoscaling_v2beta1
+  description: autoscaling_v2beta1 description
+  externalDocs:
+    description: description
+    url: url
+- name: autoscaling_v2beta2
+  description: autoscaling_v2beta2 description
+  externalDocs:
+    description: description
+    url: url
+- name: batch
+  description: batch description
+  externalDocs:
+    description: description
+    url: url
+- name: batch_v1
+  description: batch_v1 description
+  externalDocs:
+    description: description
+    url: url
+- name: batch_v1beta1
+  description: batch_v1beta1 description
+  externalDocs:
+    description: description
+    url: url
+- name: batch_v2alpha1
+  description: batch_v2alpha1 description
+  externalDocs:
+    description: description
+    url: url
+- name: certificates
+  description: certificates description
+  externalDocs:
+    description: description
+    url: url
+- name: certificates_v1beta1
+  description: certificates_v1beta1 description
+  externalDocs:
+    description: description
+    url: url
+- name: coordination
+  description: coordination description
+  externalDocs:
+    description: description
+    url: url
+- name: coordination_v1
+  description: coordination_v1 description
+  externalDocs:
+    description: description
+    url: url
+- name: coordination_v1beta1
+  description: coordination_v1beta1 description
+  externalDocs:
+    description: description
+    url: url
+- name: discovery
+  description: discovery description
+  externalDocs:
+    description: description
+    url: url
+- name: discovery_v1alpha1
+  description: discovery_v1alpha1 description
+  externalDocs:
+    description: description
+    url: url
+- name: events
+  description: events description
+  externalDocs:
+    description: description
+    url: url
+- name: events_v1beta1
+  description: events_v1beta1 description
+  externalDocs:
+    description: description
+    url: url
+- name: extensions
+  description: extensions description
+  externalDocs:
+    description: description
+    url: url
+- name: extensions_v1beta1
+  description: extensions_v1beta1 description
+  externalDocs:
+    description: description
+    url: url
+- name: networking
+  description: networking description
+  externalDocs:
+    description: description
+    url: url
+- name: networking_v1
+  description: networking_v1 description
+  externalDocs:
+    description: description
+    url: url
+- name: networking_v1beta1
+  description: networking_v1beta1 description
+  externalDocs:
+    description: description
+    url: url
+- name: node
+  description: node description
+  externalDocs:
+    description: description
+    url: url
+- name: node_v1alpha1
+  description: node_v1alpha1 description
+  externalDocs:
+    description: description
+    url: url
+- name: node_v1beta1
+  description: node_v1beta1 description
+  externalDocs:
+    description: description
+    url: url
+- name: policy
+  description: policy description
+  externalDocs:
+    description: description
+    url: url
+- name: policy_v1beta1
+  description: policy_v1beta1 description
+  externalDocs:
+    description: description
+    url: url
+- name: rbacAuthorization
+  description: rbacAuthorization description
+  externalDocs:
+    description: description
+    url: url
+- name: rbacAuthorization_v1
+  description: rbacAuthorization_v1 description
+  externalDocs:
+    description: description
+    url: url
+- name: rbacAuthorization_v1alpha1
+  description: rbacAuthorization_v1alpha1 description
+  externalDocs:
+    description: description
+    url: url
+- name: rbacAuthorization_v1beta1
+  description: rbacAuthorization_v1beta1 description
+  externalDocs:
+    description: description
+    url: url
+- name: scheduling
+  description: scheduling description
+  externalDocs:
+    description: description
+    url: url
+- name: scheduling_v1
+  description: scheduling_v1 description
+  externalDocs:
+    description: description
+    url: url
+- name: scheduling_v1alpha1
+  description: scheduling_v1alpha1 description
+  externalDocs:
+    description: description
+    url: url
+- name: scheduling_v1beta1
+  description: scheduling_v1beta1 description
+  externalDocs:
+    description: description
+    url: url
+- name: settings
+  description: settings description
+  externalDocs:
+    description: description
+    url: url
+- name: settings_v1alpha1
+  description: settings_v1alpha1 description
+  externalDocs:
+    description: description
+    url: url
+- name: storage
+  description: storage description
+  externalDocs:
+    description: description
+    url: url
+- name: storage_v1
+  description: storage_v1 description
+  externalDocs:
+    description: description
+    url: url
+- name: storage_v1alpha1
+  description: storage_v1alpha1 description
+  externalDocs:
+    description: description
+    url: url
+- name: storage_v1beta1
+  description: storage_v1beta1 description
+  externalDocs:
+    description: description
+    url: url
+- name: logs
+  description: logs description
+  externalDocs:
+    description: description
+    url: url
+- name: version
+  description: version description
+  externalDocs:
+    description: description
+    url: url

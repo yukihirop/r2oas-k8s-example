@@ -1,0 +1,24 @@
+---
+paths:
+  "/apis/":
+    get:
+      description: get available API versions
+      operationId: getAPIVersions
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.apis.meta.v1.APIGroupList"
+            application/yaml:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.apis.meta.v1.APIGroupList"
+            application/vnd.kubernetes.protobuf:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.apis.meta.v1.APIGroupList"
+        '401':
+          description: Unauthorized
+      tags:
+      - apis
+      servers: []

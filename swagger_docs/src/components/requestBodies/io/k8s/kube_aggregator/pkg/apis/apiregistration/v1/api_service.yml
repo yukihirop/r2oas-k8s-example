@@ -1,0 +1,9 @@
+---
+components:
+  requestBodies:
+    io.k8s.kube-aggregator.pkg.apis.apiregistration.v1.APIService:
+      content:
+        "*/*":
+          schema:
+            "$ref": "#/components/schemas/io.k8s.kube-aggregator.pkg.apis.apiregistration.v1.APIService"
+      required: true

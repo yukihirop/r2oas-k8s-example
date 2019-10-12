@@ -1,0 +1,9 @@
+---
+components:
+  requestBodies:
+    io.k8s.api.events.v1beta1.Event:
+      content:
+        "*/*":
+          schema:
+            "$ref": "#/components/schemas/io.k8s.api.events.v1beta1.Event"
+      required: true

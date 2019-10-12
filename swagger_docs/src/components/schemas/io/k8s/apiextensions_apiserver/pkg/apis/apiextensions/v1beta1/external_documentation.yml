@@ -1,0 +1,12 @@
+---
+components:
+  schemas:
+    io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1beta1.ExternalDocumentation:
+      description: ExternalDocumentation allows referencing an external resource for
+        extended documentation.
+      properties:
+        description:
+          type: string
+        url:
+          type: string
+      type: object

@@ -1,0 +1,22 @@
+---
+components:
+  schemas:
+    io.k8s.api.core.v1.ResourceQuotaSpec:
+      description: ResourceQuotaSpec defines the desired hard limits to enforce for
+        Quota.
+      properties:
+        hard:
+          additionalProperties:
+            "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.api.resource.Quantity"
+          description: 'hard is the set of desired hard limits for each named resource.
+            More info: https://kubernetes.io/docs/concepts/policy/resource-quotas/'
+          type: object
+        scopeSelector:
+          "$ref": "#/components/schemas/io.k8s.api.core.v1.ScopeSelector"
+        scopes:
+          description: A collection of filters that must match each object tracked
+            by a quota. If not specified, the quota matches all objects.
+          items:
+            type: string
+          type: array
+      type: object

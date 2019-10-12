@@ -1,0 +1,20 @@
+---
+paths:
+  "/logs/":
+    get:
+      operationId: logFileListHandler
+      responses:
+        '401':
+          description: Unauthorized
+      tags:
+      - logs
+      servers: []
+  "/logs/{logpath}":
+    get:
+      operationId: logFileHandler
+      responses:
+        '401':
+          description: Unauthorized
+      tags:
+      - logs
+      servers: []

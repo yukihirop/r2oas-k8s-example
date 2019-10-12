@@ -1,0 +1,21 @@
+---
+components:
+  schemas:
+    io.k8s.api.autoscaling.v2beta1.MetricStatus:
+      description: MetricStatus describes the last-read state of a single metric.
+      properties:
+        external:
+          "$ref": "#/components/schemas/io.k8s.api.autoscaling.v2beta1.ExternalMetricStatus"
+        object:
+          "$ref": "#/components/schemas/io.k8s.api.autoscaling.v2beta1.ObjectMetricStatus"
+        pods:
+          "$ref": "#/components/schemas/io.k8s.api.autoscaling.v2beta1.PodsMetricStatus"
+        resource:
+          "$ref": "#/components/schemas/io.k8s.api.autoscaling.v2beta1.ResourceMetricStatus"
+        type:
+          description: type is the type of metric source.  It will be one of "Object",
+            "Pods" or "Resource", each corresponds to a matching field in the object.
+          type: string
+      required:
+      - type
+      type: object

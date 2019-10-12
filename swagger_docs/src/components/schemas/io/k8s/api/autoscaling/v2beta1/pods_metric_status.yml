@@ -1,0 +1,18 @@
+---
+components:
+  schemas:
+    io.k8s.api.autoscaling.v2beta1.PodsMetricStatus:
+      description: PodsMetricStatus indicates the current value of a metric describing
+        each pod in the current scale target (for example, transactions-processed-per-second).
+      properties:
+        currentAverageValue:
+          "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.api.resource.Quantity"
+        metricName:
+          description: metricName is the name of the metric in question
+          type: string
+        selector:
+          "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.apis.meta.v1.LabelSelector"
+      required:
+      - metricName
+      - currentAverageValue
+      type: object

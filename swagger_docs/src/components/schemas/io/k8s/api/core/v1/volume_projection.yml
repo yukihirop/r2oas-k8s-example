@@ -1,0 +1,16 @@
+---
+components:
+  schemas:
+    io.k8s.api.core.v1.VolumeProjection:
+      description: Projection that may be projected along with other supported volume
+        types
+      properties:
+        configMap:
+          "$ref": "#/components/schemas/io.k8s.api.core.v1.ConfigMapProjection"
+        downwardAPI:
+          "$ref": "#/components/schemas/io.k8s.api.core.v1.DownwardAPIProjection"
+        secret:
+          "$ref": "#/components/schemas/io.k8s.api.core.v1.SecretProjection"
+        serviceAccountToken:
+          "$ref": "#/components/schemas/io.k8s.api.core.v1.ServiceAccountTokenProjection"
+      type: object

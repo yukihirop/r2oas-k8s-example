@@ -22,3 +22,5 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+/swagger_docs/swagger_doc.yml

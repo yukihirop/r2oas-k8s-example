@@ -1,0 +1,14 @@
+---
+components:
+  schemas:
+    io.k8s.api.networking.v1.NetworkPolicyPeer:
+      description: NetworkPolicyPeer describes a peer to allow traffic from. Only
+        certain combinations of fields are allowed
+      properties:
+        ipBlock:
+          "$ref": "#/components/schemas/io.k8s.api.networking.v1.IPBlock"
+        namespaceSelector:
+          "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.apis.meta.v1.LabelSelector"
+        podSelector:
+          "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.apis.meta.v1.LabelSelector"
+      type: object

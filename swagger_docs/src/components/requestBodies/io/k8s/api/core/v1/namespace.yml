@@ -1,0 +1,9 @@
+---
+components:
+  requestBodies:
+    io.k8s.api.core.v1.Namespace:
+      content:
+        "*/*":
+          schema:
+            "$ref": "#/components/schemas/io.k8s.api.core.v1.Namespace"
+      required: true

@@ -1,0 +1,9 @@
+---
+components:
+  requestBodies:
+    io.k8s.api.batch.v2alpha1.CronJob:
+      content:
+        "*/*":
+          schema:
+            "$ref": "#/components/schemas/io.k8s.api.batch.v2alpha1.CronJob"
+      required: true

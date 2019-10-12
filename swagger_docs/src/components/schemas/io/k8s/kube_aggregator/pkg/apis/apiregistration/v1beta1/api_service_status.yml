@@ -1,0 +1,14 @@
+---
+components:
+  schemas:
+    io.k8s.kube-aggregator.pkg.apis.apiregistration.v1beta1.APIServiceStatus:
+      description: APIServiceStatus contains derived information about an API server
+      properties:
+        conditions:
+          description: Current service state of apiService.
+          items:
+            "$ref": "#/components/schemas/io.k8s.kube-aggregator.pkg.apis.apiregistration.v1beta1.APIServiceCondition"
+          type: array
+          x-kubernetes-patch-merge-key: type
+          x-kubernetes-patch-strategy: merge
+      type: object

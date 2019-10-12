@@ -1,0 +1,22 @@
+---
+components:
+  schemas:
+    io.k8s.api.autoscaling.v2beta2.MetricSpec:
+      description: MetricSpec specifies how to scale based on a single metric (only
+        `type` and one other matching field should be set at once).
+      properties:
+        external:
+          "$ref": "#/components/schemas/io.k8s.api.autoscaling.v2beta2.ExternalMetricSource"
+        object:
+          "$ref": "#/components/schemas/io.k8s.api.autoscaling.v2beta2.ObjectMetricSource"
+        pods:
+          "$ref": "#/components/schemas/io.k8s.api.autoscaling.v2beta2.PodsMetricSource"
+        resource:
+          "$ref": "#/components/schemas/io.k8s.api.autoscaling.v2beta2.ResourceMetricSource"
+        type:
+          description: type is the type of metric source.  It should be one of "Object",
+            "Pods" or "Resource", each mapping to a matching field in the object.
+          type: string
+      required:
+      - type
+      type: object

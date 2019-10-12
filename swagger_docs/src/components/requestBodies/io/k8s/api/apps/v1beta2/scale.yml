@@ -1,0 +1,9 @@
+---
+components:
+  requestBodies:
+    io.k8s.api.apps.v1beta2.Scale:
+      content:
+        "*/*":
+          schema:
+            "$ref": "#/components/schemas/io.k8s.api.apps.v1beta2.Scale"
+      required: true

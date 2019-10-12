@@ -1,0 +1,81 @@
+---
+paths:
+  "/apis/authentication.k8s.io/v1/":
+    get:
+      description: get available resources
+      operationId: getAuthenticationV1APIResources
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.apis.meta.v1.APIResourceList"
+            application/yaml:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.apis.meta.v1.APIResourceList"
+            application/vnd.kubernetes.protobuf:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.apis.meta.v1.APIResourceList"
+        '401':
+          description: Unauthorized
+      tags:
+      - authentication_v1
+      servers: []
+  "/apis/authentication.k8s.io/v1/tokenreviews":
+    post:
+      description: create a TokenReview
+      operationId: createAuthenticationV1TokenReview
+      requestBody:
+        content:
+          "*/*":
+            schema:
+              "$ref": "#/components/schemas/io.k8s.api.authentication.v1.TokenReview"
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.api.authentication.v1.TokenReview"
+            application/yaml:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.api.authentication.v1.TokenReview"
+            application/vnd.kubernetes.protobuf:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.api.authentication.v1.TokenReview"
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.api.authentication.v1.TokenReview"
+            application/yaml:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.api.authentication.v1.TokenReview"
+            application/vnd.kubernetes.protobuf:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.api.authentication.v1.TokenReview"
+        '202':
+          description: Accepted
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.api.authentication.v1.TokenReview"
+            application/yaml:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.api.authentication.v1.TokenReview"
+            application/vnd.kubernetes.protobuf:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.api.authentication.v1.TokenReview"
+        '401':
+          description: Unauthorized
+      tags:
+      - authentication_v1
+      x-kubernetes-action: post
+      x-kubernetes-group-version-kind:
+        group: authentication.k8s.io
+        kind: TokenReview
+        version: v1
+      servers: []

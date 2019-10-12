@@ -1,0 +1,9 @@
+---
+components:
+  schemas:
+    io.k8s.api.core.v1.ContainerStateRunning:
+      description: ContainerStateRunning is a running state of a container.
+      properties:
+        startedAt:
+          "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.apis.meta.v1.Time"
+      type: object

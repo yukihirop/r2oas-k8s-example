@@ -1,0 +1,25 @@
+---
+components:
+  schemas:
+    io.k8s.api.autoscaling.v2beta2.MetricTarget:
+      description: MetricTarget defines the target value, average value, or average
+        utilization of a specific metric
+      properties:
+        averageUtilization:
+          description: averageUtilization is the target value of the average of the
+            resource metric across all relevant pods, represented as a percentage
+            of the requested value of the resource for the pods. Currently only valid
+            for Resource metric source type
+          format: int32
+          type: integer
+        averageValue:
+          "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.api.resource.Quantity"
+        type:
+          description: type represents whether the metric type is Utilization, Value,
+            or AverageValue
+          type: string
+        value:
+          "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.api.resource.Quantity"
+      required:
+      - type
+      type: object

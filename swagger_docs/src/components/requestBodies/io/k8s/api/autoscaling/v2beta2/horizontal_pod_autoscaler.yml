@@ -1,0 +1,9 @@
+---
+components:
+  requestBodies:
+    io.k8s.api.autoscaling.v2beta2.HorizontalPodAutoscaler:
+      content:
+        "*/*":
+          schema:
+            "$ref": "#/components/schemas/io.k8s.api.autoscaling.v2beta2.HorizontalPodAutoscaler"
+      required: true

@@ -1,0 +1,9 @@
+---
+components:
+  requestBodies:
+    io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1.CustomResourceDefinition:
+      content:
+        "*/*":
+          schema:
+            "$ref": "#/components/schemas/io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1.CustomResourceDefinition"
+      required: true

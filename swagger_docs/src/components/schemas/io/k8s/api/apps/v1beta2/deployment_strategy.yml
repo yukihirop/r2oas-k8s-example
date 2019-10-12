@@ -1,0 +1,14 @@
+---
+components:
+  schemas:
+    io.k8s.api.apps.v1beta2.DeploymentStrategy:
+      description: DeploymentStrategy describes how to replace existing pods with
+        new ones.
+      properties:
+        rollingUpdate:
+          "$ref": "#/components/schemas/io.k8s.api.apps.v1beta2.RollingUpdateDeployment"
+        type:
+          description: Type of deployment. Can be "Recreate" or "RollingUpdate". Default
+            is RollingUpdate.
+          type: string
+      type: object

@@ -1,0 +1,23 @@
+---
+components:
+  schemas:
+    io.k8s.api.autoscaling.v2beta1.ObjectMetricStatus:
+      description: ObjectMetricStatus indicates the current value of a metric describing
+        a kubernetes object (for example, hits-per-second on an Ingress object).
+      properties:
+        averageValue:
+          "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.api.resource.Quantity"
+        currentValue:
+          "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.api.resource.Quantity"
+        metricName:
+          description: metricName is the name of the metric in question.
+          type: string
+        selector:
+          "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.apis.meta.v1.LabelSelector"
+        target:
+          "$ref": "#/components/schemas/io.k8s.api.autoscaling.v2beta1.CrossVersionObjectReference"
+      required:
+      - target
+      - metricName
+      - currentValue
+      type: object

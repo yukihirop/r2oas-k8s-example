@@ -1,0 +1,252 @@
+---
+paths:
+  "/apis/authorization.k8s.io/v1/":
+    get:
+      description: get available resources
+      operationId: getAuthorizationV1APIResources
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.apis.meta.v1.APIResourceList"
+            application/yaml:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.apis.meta.v1.APIResourceList"
+            application/vnd.kubernetes.protobuf:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.apis.meta.v1.APIResourceList"
+        '401':
+          description: Unauthorized
+      tags:
+      - authorization_v1
+      servers: []
+  "/apis/authorization.k8s.io/v1/namespaces/{namespace}/localsubjectaccessreviews":
+    post:
+      description: create a LocalSubjectAccessReview
+      operationId: createAuthorizationV1NamespacedLocalSubjectAccessReview
+      requestBody:
+        content:
+          "*/*":
+            schema:
+              "$ref": "#/components/schemas/io.k8s.api.authorization.v1.LocalSubjectAccessReview"
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.api.authorization.v1.LocalSubjectAccessReview"
+            application/yaml:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.api.authorization.v1.LocalSubjectAccessReview"
+            application/vnd.kubernetes.protobuf:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.api.authorization.v1.LocalSubjectAccessReview"
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.api.authorization.v1.LocalSubjectAccessReview"
+            application/yaml:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.api.authorization.v1.LocalSubjectAccessReview"
+            application/vnd.kubernetes.protobuf:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.api.authorization.v1.LocalSubjectAccessReview"
+        '202':
+          description: Accepted
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.api.authorization.v1.LocalSubjectAccessReview"
+            application/yaml:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.api.authorization.v1.LocalSubjectAccessReview"
+            application/vnd.kubernetes.protobuf:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.api.authorization.v1.LocalSubjectAccessReview"
+        '401':
+          description: Unauthorized
+      tags:
+      - authorization_v1
+      x-kubernetes-action: post
+      x-kubernetes-group-version-kind:
+        group: authorization.k8s.io
+        kind: LocalSubjectAccessReview
+        version: v1
+      servers: []
+  "/apis/authorization.k8s.io/v1/selfsubjectaccessreviews":
+    post:
+      description: create a SelfSubjectAccessReview
+      operationId: createAuthorizationV1SelfSubjectAccessReview
+      requestBody:
+        content:
+          "*/*":
+            schema:
+              "$ref": "#/components/schemas/io.k8s.api.authorization.v1.SelfSubjectAccessReview"
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.api.authorization.v1.SelfSubjectAccessReview"
+            application/yaml:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.api.authorization.v1.SelfSubjectAccessReview"
+            application/vnd.kubernetes.protobuf:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.api.authorization.v1.SelfSubjectAccessReview"
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.api.authorization.v1.SelfSubjectAccessReview"
+            application/yaml:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.api.authorization.v1.SelfSubjectAccessReview"
+            application/vnd.kubernetes.protobuf:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.api.authorization.v1.SelfSubjectAccessReview"
+        '202':
+          description: Accepted
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.api.authorization.v1.SelfSubjectAccessReview"
+            application/yaml:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.api.authorization.v1.SelfSubjectAccessReview"
+            application/vnd.kubernetes.protobuf:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.api.authorization.v1.SelfSubjectAccessReview"
+        '401':
+          description: Unauthorized
+      tags:
+      - authorization_v1
+      x-kubernetes-action: post
+      x-kubernetes-group-version-kind:
+        group: authorization.k8s.io
+        kind: SelfSubjectAccessReview
+        version: v1
+      servers: []
+  "/apis/authorization.k8s.io/v1/selfsubjectrulesreviews":
+    post:
+      description: create a SelfSubjectRulesReview
+      operationId: createAuthorizationV1SelfSubjectRulesReview
+      requestBody:
+        content:
+          "*/*":
+            schema:
+              "$ref": "#/components/schemas/io.k8s.api.authorization.v1.SelfSubjectRulesReview"
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.api.authorization.v1.SelfSubjectRulesReview"
+            application/yaml:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.api.authorization.v1.SelfSubjectRulesReview"
+            application/vnd.kubernetes.protobuf:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.api.authorization.v1.SelfSubjectRulesReview"
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.api.authorization.v1.SelfSubjectRulesReview"
+            application/yaml:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.api.authorization.v1.SelfSubjectRulesReview"
+            application/vnd.kubernetes.protobuf:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.api.authorization.v1.SelfSubjectRulesReview"
+        '202':
+          description: Accepted
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.api.authorization.v1.SelfSubjectRulesReview"
+            application/yaml:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.api.authorization.v1.SelfSubjectRulesReview"
+            application/vnd.kubernetes.protobuf:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.api.authorization.v1.SelfSubjectRulesReview"
+        '401':
+          description: Unauthorized
+      tags:
+      - authorization_v1
+      x-kubernetes-action: post
+      x-kubernetes-group-version-kind:
+        group: authorization.k8s.io
+        kind: SelfSubjectRulesReview
+        version: v1
+      servers: []
+  "/apis/authorization.k8s.io/v1/subjectaccessreviews":
+    post:
+      description: create a SubjectAccessReview
+      operationId: createAuthorizationV1SubjectAccessReview
+      requestBody:
+        content:
+          "*/*":
+            schema:
+              "$ref": "#/components/schemas/io.k8s.api.authorization.v1.SubjectAccessReview"
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.api.authorization.v1.SubjectAccessReview"
+            application/yaml:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.api.authorization.v1.SubjectAccessReview"
+            application/vnd.kubernetes.protobuf:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.api.authorization.v1.SubjectAccessReview"
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.api.authorization.v1.SubjectAccessReview"
+            application/yaml:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.api.authorization.v1.SubjectAccessReview"
+            application/vnd.kubernetes.protobuf:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.api.authorization.v1.SubjectAccessReview"
+        '202':
+          description: Accepted
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.api.authorization.v1.SubjectAccessReview"
+            application/yaml:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.api.authorization.v1.SubjectAccessReview"
+            application/vnd.kubernetes.protobuf:
+              schema:
+                "$ref": "#/components/schemas/io.k8s.api.authorization.v1.SubjectAccessReview"
+        '401':
+          description: Unauthorized
+      tags:
+      - authorization_v1
+      x-kubernetes-action: post
+      x-kubernetes-group-version-kind:
+        group: authorization.k8s.io
+        kind: SubjectAccessReview
+        version: v1
+      servers: []

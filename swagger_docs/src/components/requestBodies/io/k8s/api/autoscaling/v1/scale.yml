@@ -1,0 +1,9 @@
+---
+components:
+  requestBodies:
+    io.k8s.api.autoscaling.v1.Scale:
+      content:
+        "*/*":
+          schema:
+            "$ref": "#/components/schemas/io.k8s.api.autoscaling.v1.Scale"
+      required: true

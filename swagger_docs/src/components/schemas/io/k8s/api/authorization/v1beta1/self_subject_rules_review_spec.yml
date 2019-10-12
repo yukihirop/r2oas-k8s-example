@@ -1,0 +1,9 @@
+---
+components:
+  schemas:
+    io.k8s.api.authorization.v1beta1.SelfSubjectRulesReviewSpec:
+      properties:
+        namespace:
+          description: Namespace to evaluate rules for. Required.
+          type: string
+      type: object

@@ -1,0 +1,34 @@
+---
+components:
+  schemas:
+    io.k8s.api.storage.v1beta1.CSIDriver:
+      description: CSIDriver captures information about a Container Storage Interface
+        (CSI) volume driver deployed on the cluster. CSI drivers do not need to create
+        the CSIDriver object directly. Instead they may use the cluster-driver-registrar
+        sidecar container. When deployed with a CSI driver it automatically creates
+        a CSIDriver object representing the driver. Kubernetes attach detach controller
+        uses this object to determine whether attach is required. Kubelet uses this
+        object to determine whether pod information needs to be passed on mount. CSIDriver
+        objects are non-namespaced.
+      properties:
+        apiVersion:
+          description: 'APIVersion defines the versioned schema of this representation
+            of an object. Servers should convert recognized schemas to the latest
+            internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+          type: string
+        kind:
+          description: 'Kind is a string value representing the REST resource this
+            object represents. Servers may infer this from the endpoint the client
+            submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+          type: string
+        metadata:
+          "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta"
+        spec:
+          "$ref": "#/components/schemas/io.k8s.api.storage.v1beta1.CSIDriverSpec"
+      required:
+      - spec
+      type: object
+      x-kubernetes-group-version-kind:
+      - group: storage.k8s.io
+        kind: CSIDriver
+        version: v1beta1

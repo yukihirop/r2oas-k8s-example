@@ -1,0 +1,10 @@
+---
+components:
+  schemas:
+    io.k8s.api.core.v1.NodeDaemonEndpoints:
+      description: NodeDaemonEndpoints lists ports opened by daemons running on the
+        Node.
+      properties:
+        kubeletEndpoint:
+          "$ref": "#/components/schemas/io.k8s.api.core.v1.DaemonEndpoint"
+      type: object

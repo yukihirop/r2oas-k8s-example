@@ -1,0 +1,14 @@
+---
+components:
+  schemas:
+    io.k8s.api.extensions.v1beta1.NetworkPolicyPort:
+      description: DEPRECATED 1.9 - This group version of NetworkPolicyPort is deprecated
+        by networking/v1/NetworkPolicyPort.
+      properties:
+        port:
+          "$ref": "#/components/schemas/io.k8s.apimachinery.pkg.util.intstr.IntOrString"
+        protocol:
+          description: Optional.  The protocol (TCP, UDP, or SCTP) which traffic must
+            match. If not specified, this field defaults to TCP.
+          type: string
+      type: object

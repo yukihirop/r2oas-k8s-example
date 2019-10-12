@@ -1,0 +1,15 @@
+---
+components:
+  schemas:
+    io.k8s.api.core.v1.EnvVarSource:
+      description: EnvVarSource represents a source for the value of an EnvVar.
+      properties:
+        configMapKeyRef:
+          "$ref": "#/components/schemas/io.k8s.api.core.v1.ConfigMapKeySelector"
+        fieldRef:
+          "$ref": "#/components/schemas/io.k8s.api.core.v1.ObjectFieldSelector"
+        resourceFieldRef:
+          "$ref": "#/components/schemas/io.k8s.api.core.v1.ResourceFieldSelector"
+        secretKeyRef:
+          "$ref": "#/components/schemas/io.k8s.api.core.v1.SecretKeySelector"
+      type: object
