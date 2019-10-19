@@ -60,7 +60,7 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
-  RoutesToSwaggerDocs.configure do |config|
+  R2OAS.configure do |config|
     config.namespace_type = :dot
   end
 end
