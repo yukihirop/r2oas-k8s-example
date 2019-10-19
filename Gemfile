@@ -40,7 +40,8 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'routes_to_swagger_docs', git: 'git@github.com:yukihirop/routes_to_swagger_docs.git', tag: 'v0.1.0.pre2'
+  gem 'r2-oas', git: 'git@github.com:yukihirop/r2-oas.git', tag: 'v0.1.0.pre3'
+  gem 'pry-rails'
 end
 
 group :test do
