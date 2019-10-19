@@ -17,14 +17,14 @@ $ docker pull swaggerapi/swagger-editor:latest
 
 ## 試し方
 
-`routes_to_oas_docs` の設定に関しては、 `config/environments/development.rb` をご覧ください。
+`r2-oas` の設定に関しては、 `config/environments/development.rb` をご覧ください。
 
 OpenAPI(V3)形式に変換したAPIドキュメントが `k8s.yaml` として用意してあるのでそれを使います。
 
 ### 分析・分解
 
 ```bash
-$ SWAGGER_FILE=./k8s.yaml bundle exec rake routes:oas:analyze
+$ OAS_FILE=./k8s.yaml bundle exec rake routes:oas:analyze
 ```
 
 ### SwaggerUIで表示
