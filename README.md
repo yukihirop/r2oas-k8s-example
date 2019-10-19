@@ -24,21 +24,21 @@ OpenAPI(V3)形式に変換したAPIドキュメントが `k8s.yaml` として用
 ### 分析・分解
 
 ```bash
-$ SWAGGER_FILE=./k8s.yaml bundle exec rake routes:swagger:analyze
+$ SWAGGER_FILE=./k8s.yaml bundle exec rake routes:oas:analyze
 ```
 
 ### SwaggerUIで表示
 
 ```bash
 $ # 全体を表示する
-$ bundle exec routes:swagger:ui
+$ bundle exec routes:oas:ui
 $ # 特定のpathsファイル(単体)だけ表示する
-$ PATHS_FILE=swagger_docs/src/paths/rbac_authorization_v1.yml bundle exec routes:swagger:ui
+$ PATHS_FILE=swagger_docs/src/paths/rbac_authorization_v1.yml bundle exec routes:oas:ui
 $ # 特定のpathsファイル(複数)だけ表示する
 $ echo 'rbac_authorization_v1.yml' >> swagger_docs/.paths
 $ echo 'logs.yml' >> swagger_docs/.paths
 $ echo 'batch_v1beta1.yml' >> swagger_docs/.paths
-$ bundle exec routes:swagger:ui
+$ bundle exec routes:oas:ui
 ```
 
 ### SwaggerEditorで編集
@@ -48,14 +48,14 @@ k8sのAPIドキュメントの場合、全体が5MBを超えており、ブラ�
 
 ```bash
 $ # 全体を編集する
-$ bundle exec routes:swagger:editor  # 5MBを超えているので出来ない。
+$ bundle exec routes:oas:editor  # 5MBを超えているので出来ない。
 $ # 特定のpathsファイル(単数)だけを編集する
-$ PATHS_FILE=swagger_docs/src/paths/rbac_authorization_v1.yml bundle exec routes:swagger:editor
+$ PATHS_FILE=swagger_docs/src/paths/rbac_authorization_v1.yml bundle exec routes:oas:editor
 $ # 特定のpathsファイル(複数)だけ編集する
 $ echo 'rbac_authorization_v1.yml' >> swagger_docs/.paths
 $ echo 'logs.yml' >> swagger_docs/.paths
 $ echo 'batch_v1beta1.yml' >> swagger_docs/.paths
-$ bundle exec routes:swagger:editor
+$ bundle exec routes:oas:editor
 ```
 
 ### テキストエディタで編集する場合
@@ -66,14 +66,14 @@ vscodeを使っている場合は、[SwaggerViewer](https://marketplace.visualst
 
 ```bash
 $ # 全体を編集する
-$ bundle exec routes:swagger:monitor   # swagger_docs/swagger_doc.ymlファイルを編集する。
+$ bundle exec routes:oas:monitor   # swagger_docs/swagger_doc.ymlファイルを編集する。
 $ # 特定のpathsファイル(単数)だけを編集する
-$ PATHS_FILE=swagger_docs/src/paths/rbac_authorization_v1.yml bundle exec routes:swagger:monitor
+$ PATHS_FILE=swagger_docs/src/paths/rbac_authorization_v1.yml bundle exec routes:oas:monitor
 $ # 特定のpathsファイル(複数)だけ編集する
 $ echo 'rbac_authorization_v1.yml' >> swagger_docs/.paths
 $ echo 'logs.yml' >> swagger_docs/.paths
 $ echo 'batch_v1beta1.yml' >> swagger_docs/.paths
-$ bundle exec routes:swagger:monitor
+$ bundle exec routes:oas:monitor
 ```
 
 ### 書いたドキュメントを配布する
@@ -82,18 +82,18 @@ $ bundle exec routes:swagger:monitor
 
 ```bash
 $ # 全体を配布する
-$ bundle exec routes:swagger:dist
+$ bundle exec routes:oas:dist
 $ # 特定のpathsファイル(単数)だけを配布する
-$ PATHS_FILE=swagger_docs/src/paths/rbac_authorization_v1.yml bundle exec routes:swagger:dist
+$ PATHS_FILE=swagger_docs/src/paths/rbac_authorization_v1.yml bundle exec routes:oas:dist
 $ # 特定のpathsファイル(複数)だけ配布する
 $ echo 'rbac_authorization_v1.yml' >> swagger_docs/.paths
 $ echo 'logs.yml' >> swagger_docs/.paths
 $ echo 'batch_v1beta1.yml' >> swagger_docs/.paths
-$ bundle exec routes:swagger:dist
+$ bundle exec routes:oas:dist
 ```
 
 ### pathsファイル一覧を取得する
 
 ```bash
-$ bundle exec routes:swagger:paths_ls
+$ bundle exec routes:oas:paths_ls
 ```
