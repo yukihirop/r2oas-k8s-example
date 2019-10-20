@@ -60,13 +60,13 @@ $ bundle exec routes:oas:editor
 
 ### テキストエディタで編集する場合
 
-git管理しない `oas_docs/swagger_doc.yml` を `monitor` コマンドで管理する事で差分を検知します。
+git管理しない `oas_docs/oas_doc.yml` を `monitor` コマンドで管理する事で差分を検知します。
 
 vscodeを使っている場合は、[SwaggerViewer](https://marketplace.visualstudio.com/items?itemName=Arjun.swagger-viewer)プラグインが便利
 
 ```bash
 $ # 全体を編集する
-$ bundle exec routes:oas:monitor   # oas_docs/swagger_doc.ymlファイルを編集する。
+$ bundle exec routes:oas:monitor   # oas_docs/oas_doc.ymlファイルを編集する。
 $ # 特定のpathsファイル(単数)だけを編集する
 $ PATHS_FILE=oas_docs/src/paths/rbac_authorization_v1.yml bundle exec routes:oas:monitor
 $ # 特定のpathsファイル(複数)だけ編集する
